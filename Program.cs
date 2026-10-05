@@ -22,6 +22,19 @@
             //b):
             // we can make fields private and make public properties provide controlled access and allow validation before changing the values.
             #endregion
+
+            #region q3
+            DeliveryAddress deliveryAddress01 = new DeliveryAddress("cairo", "Haram", 18);
+            DeliveryAddress deliveryAddress02 = deliveryAddress01;
+            Console.WriteLine(deliveryAddress01.GetFullAddress());
+            Console.WriteLine(deliveryAddress02.GetFullAddress());
+
+            deliveryAddress02 = new DeliveryAddress("giza", "tersa", 20);
+
+            Console.WriteLine(deliveryAddress01.GetFullAddress());
+            Console.WriteLine(deliveryAddress02.GetFullAddress());
+            #endregion
+
         }
     }
 }
